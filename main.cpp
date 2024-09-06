@@ -1,6 +1,6 @@
 // main.cpp
 #include <pybind11/pybind11.h>
-#include "src/calculations.h"
+#include "calculations.h"
 
 namespace py = pybind11;
 

@@ -17,7 +17,8 @@ enable_testing()
 add_subdirectory(extern/pybind11)
 pybind11_add_module(SumFunction main.cpp)
 
-add_library(cal STATIC src/calculations.cpp)
+include_directories(${PROJECT_SOURCE_DIR}/inc)
+add_subdirectory(src)
 set_target_properties(cal PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_link_libraries(SumFunction PRIVATE cal)
 
